@@ -1,0 +1,39 @@
+//   Chapter 1 :   Variables & Data Types
+
+
+
+
+public class Chapter_1 {
+
+
+
+    public static void main(String[] args) {
+
+        // Quick Quig : write a java program to add three numbers
+
+        System.out.println("the sum of three numbers is ");
+        int num1 = 8;
+        int num2 = 10;
+        int num3 = 15;
+        int sum = num1+num2+num3;
+        System.out.println(sum);
+
+        //  a constant value which can be assigned to the variable is called a literal.
+        byte age = 34;
+        short age1 = 56;
+        int age2 = 65;
+        long ageDino = 5666666666666666l;
+        char ch = 'A';
+        float f1 = 6.7f;
+        double d1 = 4.66;
+        boolean a = true;
+        String name = "umesh";
+
+
+
+
+
+
+
+    }
+}
