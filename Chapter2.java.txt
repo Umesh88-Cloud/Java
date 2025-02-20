@@ -1,0 +1,89 @@
+//                                Chapter 2 : Operators & Expanssions
+
+public class Chapter_2 {
+    public static void main(String[] args) {
+
+//   1. Arithmetic operators
+
+        int a= 6;
+        int b = 4+a;
+        System.out.println(b);
+        System.out.println(6%5);
+
+//     2. Assignment operator
+
+        int num = 20;
+         num+= 30;
+        System.out.println(num);
+
+//     3. comparison operator
+
+        System.out.println(8==8);
+        System.out.println(8>=9);
+
+//     4. logical operator
+
+        System.out.println(8==8 && 9>=10);
+        System.out.println(8==8 || 9>=10);
+
+//     5. Bitwise operator
+
+        System.out.println(2&3);
+        System.out.println(2|3);
+
+
+//                                chapter 2: Precedence & Associativity
+
+
+        int c = 6*5-34/2;
+        /*
+        highest precedence goes to * and / . They are then evaluted on the basis of left to right associativity.
+               = 30-34/2
+               = 30-17
+               = 13
+         */
+        System.out.println(c);
+
+//                                        Quick Quiz
+
+        int x = 7;
+        int y = 8;
+        int k = x-y/2;
+        System.out.println(k);
+
+        int m = (y*y-4*x)/(2*x);
+        System.out.println(m);
+
+        int n = x*x-y*y;
+        System.out.println(n);
+
+
+//                                Chapter 2: Increment & Decrement operator
+
+        int i = 56;
+        System.out.println(++i);     // first increment the value then return the value of i
+        System.out.println(i++);     // first return the value of  then increment the value of i
+        System.out.println(i);
+
+        int j = 90;
+        System.out.println(--j);     // first decrement the value then return the value of j
+        System.out.println(j--);     // first return the value of  then decrement the value of j
+        System.out.println(j);
+
+
+
+//                                          Quick Quig
+
+
+         int z= 7;
+         int s = ++z + 8;
+        System.out.println(s);
+
+
+        char v = 'b';
+        v++;
+        System.out.println(v);
+
+
+    }
+}
