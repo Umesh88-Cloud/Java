@@ -1,0 +1,85 @@
+//                                           Chapter 3 : String
+
+public class Chapter_3 {
+    public static void main(String[] args) {
+        String name = "Umesh";
+        System.out.println(name);
+
+
+
+//                                         Chapter 3 : String Method
+
+        int value = name.length();
+        System.out.println(value);
+
+        String lstr = name.toLowerCase();
+        System.out.println(lstr);
+
+        String ustr = name.toUpperCase();
+        System.out.println(ustr);
+
+
+
+        String nontreamstring = "   Aapeksha   ";
+        String trimstring = nontreamstring.trim();
+        System.out.println(nontreamstring);
+        System.out.println(trimstring);
+
+
+        System.out.println(name.substring(3));
+        System.out.println(name.substring(0,4));
+
+
+        System.out.println(name.replace('e','p'));
+
+
+        System.out.println(name.startsWith("Um"));
+
+        System.out.println(name.endsWith("sh"));
+
+        System.out.println(name.charAt(2));
+
+
+
+        System.out.println(name.indexOf('U'));
+        System.out.println(name.indexOf('e',2));
+        System.out.println(name.lastIndexOf("sh"));
+        System.out.println(name.lastIndexOf("sh",2));
+
+
+        System.out.println(name.equals("umesh"));
+
+
+        System.out.println(name.equalsIgnoreCase("umesh"));
+
+
+
+
+
+//                                         Chapter 3 : Escape Sequence Character
+
+
+
+        System.out.println("I am a escape sequence double quote ");
+        System.out.println("I am a escape sequence \" double quote "); // \" it used to when we need to write a double quote
+        System.out.println("I am a escape sequence \\ double quote "); // // it is used to write a backslash in answer
+        System.out.println("I am a escape \nsequence double quote"); // it used to when we need new line to print our answer
+        System.out.println("I am a escape sequence \tdouble quote"); // it is used to print a tab space between sequence and double word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
