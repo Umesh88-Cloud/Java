@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Practice_Set_1 {
+    public static void main(String[] args) {
+
+//  Q1 write a program to sum three numbers in java
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter first number");
+        int a = sc.nextInt();
+        System.out.println("enter second number");
+        int b = sc.nextInt();
+        System.out.println("enter third number");
+        int c = sc.nextInt();
+        int sum = a+b+c;
+        System.out.println("addition of three numbers is");
+        System.out.println(sum);
+
+//  Q2 write a program to calculate cgpa using marks of three subject out of 100
+
+        int subject1 = 80;
+        int subject2 = 76;
+        int subject3 = 96;
+        float cgpa = (subject1+subject2+subject3)/30.0f;
+        System.out.print("cgpa = ");
+        System.out.println(cgpa);
+
+
+//  Q3 write a java program which asks the user to enter his/her name and get them with "hello<name>,have a good day",text
+
+        System.out.println("what is your name");
+        String name = sc.next();
+        System.out.println("hello "+ name + " have a good day");
+
+//  Q4 write a java program to convert kilometer to miles
+//  Q5 write a java program to detect whether a number entered by the user is integer or not
+
+        System.out.println("enter the number");
+        boolean num = sc.hasNextInt();
+        System.out.println(num);
+
+
+    }
+}
