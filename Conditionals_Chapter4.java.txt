@@ -1,0 +1,71 @@
+//                                   Chapter 4 : Conditionals In Java
+
+import java.util.Scanner;
+
+public class Chapter_4 {
+    public static void main(String[] args) {
+
+        int age = 18;
+        if(age>18){
+            System.out.println("yes boy you can drive it");
+        }
+        else {
+            System.out.println("no boy you can not drive it");
+        }
+
+
+//                                    Chapter 4 : Logical operator
+
+        boolean a = true;
+        boolean b = false;
+
+        if (a && b){
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
+        }
+
+        if(a || b){
+            System.out.println("yes");
+        }
+        else {
+            System.out.println("No");
+        }
+        System.out.println(!a);
+        System.out.println(!b);
+
+
+
+//                                      Chapter 4 : Switch Case Control Statement
+
+
+
+        System.out.println("Enter your age ");
+        Scanner sc = new Scanner(System.in);
+        int Age = sc.nextInt();
+
+        switch (Age){
+            case 18:
+                System.out.println("you are going to become an adult");
+                break;
+
+            case 23:
+                System.out.println("you are going to join a bob ");
+                break;
+
+            case 60:
+                System.out.println("you are going to get retired");
+                break;
+
+            default:
+                System.out.println("enjoy your life");
+        }
+        System.out.println("thanks for using my java code");
+
+
+
+
+
+    }
+}
