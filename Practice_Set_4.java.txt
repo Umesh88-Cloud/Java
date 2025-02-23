@@ -1,0 +1,155 @@
+import java.util.Scanner;
+
+public class Practice_Set_4 {
+    public static void main(String[] args) {
+
+
+//        Q1. What will be the output of this program
+
+
+        int a = 10;
+        if (a==11){
+            System.out.println("i am 11");
+        }
+        else {
+            System.out.println("i am not 11");
+        }
+
+
+
+//        Q2. write a program to find out whether a student is pass or fail. If it is requires total 40% and at least
+//            33% in each subject to pass. Assume 3 subject and take marks as an input from the user.
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter you marks in math");
+        int math = sc.nextInt();
+        System.out.println("enter chemestry marks ");
+        int chemestry = sc.nextInt();
+        System.out.println("enter your physics marks");
+        int physics = sc.nextInt();
+
+        float percentage = (math+chemestry+physics)/3.0f;
+
+        System.out.println("your total percentage is : ");
+        System.out.println(percentage);
+
+        if(percentage >= 40 && math >= 33 && chemestry >= 33 && physics >= 33){
+            System.out.println("congratulation you are pass ");
+
+        }
+        else {
+            System.out.println("Sorry you are not pass, best of luck for next time ");
+        }
+
+
+
+
+
+
+        /*  Q3. calculate income tax paid by an emplyee to goverment as per the slash mentioned below
+
+                 income slash                     tax
+                1) 2.5l - 5.0l                     5%
+                2) 5.0l - 10.0l                    20%
+                3) above 10.0l                     30%
+
+              note that there is no tax below 2.5l ,take income amount as an input form the user
+         */
+
+        System.out.println("enter your income in lakh ");
+        float income = sc.nextFloat();
+        float tax = 0;
+        if (income<2.5f){
+            tax = tax + 0;
+        }
+        else if (income>2.5f && income<5.0f){
+            tax = tax + 0.05f *(income-2.5f);
+        }
+        else if (income>5.0f && income<10.0f ) {
+            tax = tax + 0.05f * (5.0f-2.5f);
+            tax = tax + 0.2f * (income-5.0f);
+        }
+        else if (income>10.0f) {
+            tax = tax + 0.05f * (5.0f-2.5f);
+            tax = tax + 0.2f * (10.f-5.0f);
+            tax = tax + 0.3f * (income-10.0f);
+
+        }
+        System.out.println("the total tax is : " + tax);
+
+
+
+
+//        Q4. write a java program to find out the day of the week given the number [1 for monday , 2 for tuesday, ...
+//             and so on !]
+
+        System.out.println("enter the number ");
+        Scanner cs = new Scanner(System.in);
+        int  day = cs.nextInt();
+
+        switch (day){
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            case 3:
+                System.out.println("Wednesday");
+                break;
+
+            case  4:
+                System.out.println("Thursday");
+                break;
+
+            case 5:
+                System.out.println("Friday");
+                break;
+
+            case 6:
+                System.out.println("Saturday");
+                break;
+
+            case 7:
+                System.out.println("Sunday");
+                break;
+
+            default:
+                System.out.println("invalid input, please enter valid input ");
+
+        }
+
+
+
+
+        /*
+        Q5. write a program to find out the type of website form the url
+              .com -> Commercial website
+              .org -> Organisation website
+              .in -> Indian website
+         */
+        System.out.println("enter website last word");
+        Scanner mn = new Scanner(System.in);
+        String website = mn.next();
+
+        if (website.endsWith(".com")){
+            System.out.println("It is a commercial website ");
+        }
+        else if (website.endsWith(".org")) {
+            System.out.println("It is a Organisation website");
+
+        }
+        else if (website.endsWith(".in")) {
+            System.out.println("It is Indian website ");
+
+        }
+        else {
+            System.out.println("enter correct website ");
+        }
+
+
+    }
+}
