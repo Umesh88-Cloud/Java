@@ -1,0 +1,365 @@
+public class Practice_Set_5 {
+    public static void main(String[] args) {
+
+
+ /*
+        Q1. Write a program to print the following pattern
+
+            * * * *
+            * * *
+            * *
+            *
+     int n=4;
+        for (int i =n;i>0;i--){
+            for (int j=0;j<i;j++){
+                System.out.print("*");
+
+            }
+            System.out.println("\n");
+
+        }
+  */
+
+
+  /*
+      Q2. write a program to sum first n even numbers using while loop
+
+
+        int sum = 0;
+        int n= 4;
+        for (int i =0;i<=4;i++){
+            sum = sum + (2*i);
+
+        }
+        System.out.println(sum);
+   */
+
+
+/*
+    Q3. write a program to print multiplication table of a given number n
+
+
+
+        for (int i=0; i<=10;i++){
+            System.out.println(2*i);
+
+        }
+
+ */
+
+
+/*
+         write a program to print a multiplication table of 10 in reverse order
+
+
+        for (int i =10;i>0;i--){
+            System.out.println(10*i);
+        }
+
+ */
+
+
+/*
+         write a program to find the  factorial of a given number using for loops
+
+
+         what is factorial n = n * n-1 * n-2.........1
+        5! = 5*4*3*2*1
+
+        int n = 5;
+        int i = 1;
+        int factorial = 1;
+        while (i<=n){
+            factorial = factorial*i;
+            i++;
+        }
+        System.out.println(factorial);
+
+
+  */
+
+/*
+        write a program to caluculate the sum of the multiplication of the numbers occurring in the multiplication table of 8
+
+
+       int sum = 0;
+       for (int i = 0; i<=10;i++){
+           sum = sum + (8*i);
+       }
+        System.out.println(sum);
+
+  */
+
+//                                       Apna College Problems On Star Printing
+
+
+
+/*             Problem 1 :
+
+        for (int i=1;i<=4;i++){
+            for (int j=1;j<5;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+        }
+
+ */
+
+
+
+
+/*          Problem 2 :
+
+        for (int i=1;i<=4;i++){
+            for (int j=1;j<=5;j++){
+                if (i==1||j==1||i==4||j==5){
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+
+/*           Problem 3:
+
+        for (int i=1;i<=4;i--){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+
+/*                  Problem 4:
+
+        for (int i=4;i>=1;i--){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i=2;i<=4;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+
+
+
+
+/*                Problem 5:
+
+        for (int i=1;i<=4;i++){
+            // ineer loop --> space count
+            for (int j=1;j<=4-i;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+
+   /*                Problem 6:
+
+        for (int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+    */
+
+
+
+
+  /*               Problem 7:
+
+        for (int i=5;i>=1;i--){
+            for (int j=1;j<=i;j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+
+   */
+/*                Problem 8:
+
+        int number = 1;
+        for (int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print(number+" ");
+                number++;
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+  /*            Problem 9:
+
+        for (int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                int sum = i+j;
+                if (sum%2==0){
+                    System.out.print("1");
+                }
+                else {
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+
+   */
+
+
+
+//                                        Advanced Question On Pattern
+
+  /*            Problem 10:
+
+        for (int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            int spaces = 2*(5-i);
+            for (int j=1;j<spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+        for (int i=5;i>=1;i--){
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            int spaces = 2*(5-i);
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+   */
+
+
+
+
+/*            Problem 11:
+
+        for (int i=1;i<=5;i++){
+            int spaces = 5-i;
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=5;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+   /*          Problem 12:
+
+        for (int i=1;i<=5;i++){
+            int spaces = 5-i;
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+
+    */
+
+
+
+/*              Problem 13:
+
+        for (int i=1;i<=5;i++){
+            int spaces = 5-i;
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            for (int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+ */
+
+
+
+
+
+//              Problem 14:
+
+        for (int i=1;i<=4;i++){
+            int spaces = 4-i;
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=2*i-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i=4;i>=1;i--){
+            int spaces = 4-i;
+            for (int j=1;j<=spaces;j++){
+                System.out.print(" ");
+            }
+            for (int j=1;j<=2*i-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+    }
+}
