@@ -1,0 +1,310 @@
+import java.util.Scanner;
+
+public class Practice_Problem {
+    public static void main(String[] args) {
+
+
+
+/*      Q1. Print the fibonacci series
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter how many number are print ");
+        int n = sc.nextInt();
+        int firstNum= 0;
+        int secondNum=1;
+
+        for (int i=1;i<=n;i++){
+            System.out.print(firstNum +" ,");
+            int nextNum = firstNum+secondNum;
+            firstNum = secondNum;
+            secondNum = nextNum;
+
+        }
+
+ */
+
+
+
+/*
+  Q2. write a java program to find sum of numbers entered by user
+      EX :
+          Enter the count of the number = 5
+          Number entered by user  = 1,2,3,4,5
+          Sum of numbers entered by user = 15
+
+
+        int sum =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the count of the number: ");
+        int count = sc.nextInt();
+        for (int i=1;i<=count;i++){
+            int number = sc.nextInt();
+             sum = sum + number;
+
+        }
+        System.out.println("sum of the numbers entered by user is : "+ sum);
+
+ */
+
+
+
+/*
+    Q3. java program to find the average of the numbers entered by user
+        EX:
+           Enter the count of the number = 5
+           Numbers entered by the user = 10,20,30,40,50
+           Average of numbers entered by user = 30
+
+        int sum =0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the count of the numbers: ");
+        int count = sc.nextInt();
+
+        for (int i=1;i<=count;i++){
+            int number = sc.nextInt();
+             sum = sum + number ;
+
+        }
+        int average = sum /count ;
+        System.out.println("Average of numbers entered by the user: "+ average);
+
+ */
+
+
+/*
+    Q4. java program to add a digits in a number
+        EX:
+           Number entered by user = 123
+           sum of digits = 6
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to get sum of that number");
+        int number = sc.nextInt();
+        int sum =0;
+        while(number>0){
+            int lastDigit = number % 10;
+            number = number / 10;
+            sum = sum + lastDigit;
+
+        }
+        System.out.println("sum of that number is :"+ sum);
+
+ */
+
+
+
+/*
+      Q5. write a java program to compute sum and average of array element
+          EX:
+             Numbers in array = {1,2,3,4,5}
+             Sum of numbers in array = 15
+             Average of numbers in array = 3
+
+        int sum =0;
+        int arr[] = {1,2,3,4,5,6};
+        int length = arr.length;
+        for (int i=0;i<length;i++){
+            sum = sum + arr[i];
+        }
+        System.out.println("Sum of elements of array: "+ sum);
+        float average = sum/length;
+        System.out.println("Average of elements of array is: "+ average );
+
+ */
+
+/*     Q6. Write a java program that generates all prime numbers up to N using an efficient algorithm.
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int num = sc.nextInt();
+
+
+        for (int i=2;i<=num;i++){
+            boolean isboolean = true;
+            for (int j=2;j<=i/2;j++){
+                if (i%j==0){
+                    isboolean = false;
+                    break;
+                }
+            }
+            if (isboolean){
+                System.out.println(i+ "is prime number");
+            }
+        }
+
+ */
+
+
+/*   Q7. Write a java program to sort an array of integers using a sorting algoritham (eg. bubble sort).
+
+
+        int arr[] ={5,1,6,4,2,8};
+        int length = arr.length;
+
+        System.out.print("Ansorted Array: ");
+        for (int i=0;i<length;i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        for (int i=0;i<length;i++){
+            for (int j=1;j<=length-1;j++){
+                if (arr[j-1]>arr[j]){
+                    int temp = arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]= temp;
+
+                }
+            }
+        }
+        System.out.println();
+        System.out.print("Sorted Array: ");
+        for (int i=0;i<length;i++){
+            System.out.print(arr[i]+" ");
+        }
+
+ */
+
+/*    Q8. Write a program that finds the largest and smallest elements in an array of integers
+
+        int arr[] = {4,5,2,3,7,85,9,};
+        int smallest = arr[0];
+        int largest = arr[0];
+
+        for (int i=0;i<arr.length;i++){
+            if (arr[i]<smallest){
+                smallest = arr[i];
+            } else if (arr[i]>largest) {
+                largest = arr[i];
+
+            }
+
+
+        }
+        System.out.println("Smallest number :"+ smallest);
+        System.out.println("largest number: "+ largest);
+
+ */
+
+
+/*    Q9. Write a program to reverse a string without using built in methods
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the string ");
+        String str = sc.nextLine();
+
+        int lenghth = str.length();
+
+        char ch []  = str.toCharArray();
+
+        for (int i = lenghth-1;i>=0;i--){
+            System.out.print(ch[i]);
+        }
+        
+ */
+
+
+
+/*    Q10. Write a program that check if a given string or number is a palindrome
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string");
+        String str = sc.nextLine();
+
+        String OriginalSgtring  = str;
+        int lenghth = str.length();
+        String rev ="";
+
+        for (int i=lenghth-1;i>=0;i--){
+            rev = rev + str.charAt(i);
+        }
+        if (OriginalSgtring.equals(rev)){
+            System.out.println("The given string is palindrome");
+        }
+        else {
+            System.out.println("The given string is not palindrome");
+        }
+
+ */
+
+
+ /*    Q11. write a java program to perform matrix multiplication of two matrices of size M*N and N*P.
+        your program should handle user input for the size of the matrices and the elements
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of rows (M) for first matrix: ");
+        int m = sc.nextInt();
+        System.out.print("Enter number of columns (N) for first matrix (rows of second matrix): ");
+        int n = sc.nextInt();
+        System.out.print("Enter number of columns (P) for second matrix: ");
+        int p = sc.nextInt();
+
+        int[][] matrix1 = new int[m][n];
+        int[][] matrix2 = new int[n][p];
+        int[][] result = new int[m][p];
+
+        System.out.println("Enter elements of first matrix:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix1[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter elements of second matrix:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < p; j++) {
+                matrix2[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < p; j++) {
+                for (int k = 0; k < n; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        System.out.println("Resultant Matrix:");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < p; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+  */
+
+
+/*    Q12. Write a program to convert temperature form fahrenheit to celsius and vice versa.
+        Take user input for the temperature and conversion type in java.
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Temperature Converter");
+        System.out.print("Enter temperature: ");
+        double temperature = sc.nextDouble();
+
+        System.out.print("Convert to (C/F): ");
+        char choice = sc.next().toUpperCase().charAt(0);
+
+        if (choice == 'C') {
+            double celsius = (temperature - 32) * 5 / 9;
+            System.out.printf("%.2f Fahrenheit is %.2f Celsius\n", temperature, celsius);
+        } else if (choice == 'F') {
+            double fahrenheit = (temperature * 9 / 5) + 32;
+            System.out.printf("%.2f Celsius is %.2f Fahrenheit\n", temperature, fahrenheit);
+        } else {
+            System.out.println("Invalid choice! Please enter 'C' or 'F'.");
+        }
+
+ */
+
+    }
+}
