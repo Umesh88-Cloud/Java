@@ -1,0 +1,145 @@
+//                                         Chapter_7: Methods / Function
+
+/*
+public class Chapter_7 {
+
+      static void change(int a){
+          a= 98;
+      }
+
+      static void change2(int arr[]){
+          arr[0]=80;
+      }
+
+      static void telljoke(){
+          System.out.println("You are a stupid person");
+      }
+      int logic(int x,int y){
+        int z;
+        if (x>y){
+            z= x+y;
+        }
+        else {
+            z= x*y;
+        }
+        return z;
+    }
+
+
+
+//        Function / Method Overloading
+    static void foo(){
+        System.out.println("Good Morning Bro!");
+    }
+    static void foo(int a){
+        System.out.println("Good morning "+ a + " Bro!");
+    }
+
+
+    public static void main(String[] args) {
+
+//          Case 1 : Change In Integer
+        int x = 45;
+        change(x);
+        System.out.println("The value of x after running change is :"+ x);
+
+//        Case 2: chnage In Array
+        int num []={1,2,3,4,5,};
+        change2(num);
+        System.out.println("The value of 0 index after running change is: "+ num[0]);
+
+
+//        Method Overloading
+
+        foo();
+        foo(300);
+
+
+        int a = 5;
+        int b= 6;
+        Chapter_7 obj = new Chapter_7();
+        int c = obj.logic(a,b);
+//       int c= logic(a,b);
+
+        int a1 = 7;
+        int b1 = 8;
+        int c1 = obj.logic(a1,b1);
+//        int c1 = logic(a1,b1);
+
+
+
+        telljoke();
+        System.out.println(c);
+        System.out.println(c1);
+
+
+    }
+}
+
+ */
+
+
+
+/*                                        Variable Arguments
+
+
+public class Chapter_7{
+    static int sum(int...arr){
+        int result= 0;
+        for (int a:arr){
+            result+=a;
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Varargs Tutorial");
+        System.out.println("Sum of nothing is "+sum());
+        System.out.println("The sum of 1 and 2 is: "+ sum(1,2));
+        System.out.println("The Sum of 1,2,and 3 is: "+ sum(1,2,3));
+
+
+    }
+
+}
+
+ */
+
+//                                             Recursion
+
+public class Chapter_7 {
+
+    static int factorial(int n){
+        if (n==0 || n==1){
+            return 1;
+        }
+        else {
+            n= n*factorial(n-1);
+            return n;
+
+        }
+    }
+
+    static int factorial_itrative(int n){
+        if (n==0 || n==1){
+            return 1;
+        }
+        else {
+            int product =1;
+            for (int i=1;i<=n;i++){
+                product*=i;
+            }
+            return product;
+        }
+
+    }
+
+
+
+
+    public static void main(String[] args) {
+        int a = 5;
+        System.out.println("Factorial of 5 is: " + factorial(a));
+        System.out.println("facorial of 5 is "+ factorial_itrative(a));
+
+    }
+}
