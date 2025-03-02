@@ -1,0 +1,41 @@
+//                                      Chapter 8: Introduction to oops
+
+class employe{
+    int id;
+    String name;
+    int salary;
+
+    public void printdetails(){
+        System.out.println("My id is :"+id);
+        System.out.println("my name is: "+ name);
+    }
+    public int getSalary(){
+        return salary;
+    }
+
+    public void setName() {
+    }
+}
+
+public class Chapter_8 {
+    public static void main(String[] args) {
+        employe umesh = new employe();
+        employe appu = new employe();
+        umesh.id =123;
+        umesh.name="Umesh";
+        appu.id= 123;
+        appu.name = "Apeksha";
+        System.out.println(umesh.id);
+        System.out.println(umesh.name);
+        umesh.printdetails();
+        appu.printdetails();
+
+        umesh.salary= 12;
+        appu.salary = 10;
+
+        int salary=umesh.getSalary();
+       //appu.getSalary();
+        System.out.println(salary);
+        
+    }
+}
