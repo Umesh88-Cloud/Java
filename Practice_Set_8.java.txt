@@ -1,0 +1,87 @@
+/*
+    Q1. Create a class Employee with following properties and methods
+         1. salary (properties) (int)
+         2. getSalary (method returning int)
+         3. name (property)(String)
+         4. getName (method returning String)
+         5. setName (method changing name)
+ */
+
+class Employee{
+    int salary;
+    String name;
+
+    public int getSalary(){
+        return salary;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String n){
+        name =n;
+
+    }
+}
+
+/*
+     Q2. Create a class cellphone with method to print "Ringing","Vibrating",...etc.
+ */
+
+class cellphone{
+    public void vibrate(){
+        System.out.println("Vibrating");
+    }
+
+    public void ringing(){
+        System.out.println("Ringing");
+    }
+}
+
+/*
+    Q3. Create a class square with a method to intialize its side,calculating area , perimeter etc
+ */
+
+class Square{
+    int side;
+
+    public int area(){
+        return side*side;
+    }
+
+    public int perimeter(){
+        return 4*side;
+    }
+}
+
+public class Practice_Set_8 {
+    public static void main(String[] args) {
+
+//                 Problem 1
+        Employee umesh = new Employee();  // object creation
+
+        umesh.setName("Umesh Changdev Rupnar");
+        umesh.salary=123;
+
+        System.out.println(umesh.getSalary());
+        System.out.println(umesh.getName());
+
+
+
+//                   Problem 2
+
+        cellphone VIVO = new cellphone();   // new object creation
+        VIVO.vibrate();
+        VIVO.ringing();
+
+//                   Problem 3
+
+        Square sq = new Square();
+        sq.side = 3;
+        System.out.println(sq.area());
+        System.out.println(sq.perimeter());
+
+
+    }
+}
