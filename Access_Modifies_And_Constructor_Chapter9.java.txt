@@ -1,0 +1,70 @@
+//                                 Chapter 9: Access Modifies And Constructor
+
+/*
+   Access Modifiers :
+   1) private
+   2) public
+   3) protected
+   4) Default
+ */
+
+class employee1{
+    private int id;
+    private String name;
+
+//    Setting Name And Getting Name
+    public void setName(String n){
+        this.name = n;
+    }
+    public String getName(){
+        return name;
+    }
+//    Setting ID And Getting ID
+
+    public void setId(int i){
+        this.id = i;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+
+//          Constructor
+    public employee1(String myname,int myid){
+        name = myname;
+        id = myid;
+
+    }
+
+    public employee1(){
+        name = "umesh";
+        id = 123;
+    }
+
+
+
+
+
+}
+
+public class Chapter_9 {
+    public static void main(String[] args) {
+
+//        employee1 appu = new employee1("raju",67); // passing parameter to constructor
+          employee1 appu = new employee1();          // default constructor
+
+//        appu.setName("Hii I Am Umesh");
+//        System.out.println(appu.getName());
+//
+//
+//        appu.setId(123);
+//        System.out.println(appu.getId());
+
+        System.out.println(appu.getId());
+        System.out.println(appu.getName());
+
+
+
+    }
+}
