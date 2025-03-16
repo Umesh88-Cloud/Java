@@ -1,0 +1,246 @@
+//                                                Chapter 10: Inheritance
+
+
+
+/*
+class Base{
+    int x;
+    public void printme(){
+        System.out.println("I am a base class");
+    }
+    public void SetX(int x){
+        this.x= x;
+
+    }
+    public int getX(){
+        return x;
+    }
+}
+class derived extends Base {
+    int y;
+
+    public void printme1(){
+        System.out.println("I am derived class");
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getY() {
+        return y;
+    }
+}
+
+
+public class Chapter_10 {
+    public static void main(String[] args) {
+
+        Base b = new Base(); // here we crete an object of base class
+        derived d = new derived();  // here we crete an object of derived class
+
+        b.SetX(12);
+        d.SetX(13); // accessing properties of base class
+
+        System.out.println(b.getX());
+        System.out.println(d.getX());  // here we can access the properties of base class using derived class object
+
+        d.setY(15);
+        System.out.println(d.getY());
+
+
+
+//    Note :- base class does not access the properties of derived class (means int y )
+
+    }
+}
+
+ */
+
+
+
+/*         Quick Quiz : create a class animal and derived another class dog form it in java
+
+class animal{
+    String name;
+    int age;
+
+    public void makesound(){
+        System.out.println("animal make sound");
+    }
+    public String getName(){
+        return  name;
+    }
+    public int getAge(){
+        return age;
+    }
+
+
+    public animal(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+    public animal(){
+       System.out.println("I am an animal class constructor: ")
+
+    }
+
+}
+
+class dog extends animal{
+
+    public void makesound(){
+        System.out.println("Dog bark");
+    }
+    public dog(String name,int age){
+        this.name= name;
+        this.age= age;
+    }
+    public dog(){
+    System.out.println("I am a dog class constructor")
+
+    }
+}
+
+
+
+public class Chapter_10{
+    public static void main(String[] args) {
+
+        dog mydog = new dog("moti",8);
+        mydog.makesound();
+
+        System.out.println(mydog.getAge());
+        System.out.println(mydog.getName());
+
+
+
+
+
+    }
+}
+
+ */
+
+
+
+/*                                  Chapter 10: Inheritance
+
+
+class base{
+
+    public base(){
+        System.out.println("I am a base class constructor");
+    }
+    public base(int x){
+        System.out.println("I am a overloaded constructor with value x is :"+ x);
+    }
+
+
+
+}
+
+
+class derive extends base{
+
+    public derive(){
+        System.out.println("I am a derived class constructor");
+    }
+
+    public derive(int x,int y){
+        super(x);
+        System.out.println("I am a overloaded constructor with value of y is: "+y);
+    }
+}
+
+
+class childofderived extends derive{
+
+    public childofderived(){
+        System.out.println("I am a child of derived class constructor");
+    }
+    public childofderived(int x ,int y ,int z){
+        super(x,y);
+        System.out.println("I am a overloaded constructor with a value of z is : "+ z);
+    }
+
+}
+
+
+
+
+public class Chapter_10{
+    public static void main(String[] args) {
+
+       // derive d = new derive(2,4);
+        childofderived c = new childofderived(2,4,6);
+
+
+
+
+    }
+}
+
+ */
+
+/*                             Chapter 10: Inheritance
+
+//                               Method Overriding
+
+class A{
+    public void methd1(){
+        System.out.println("I am a methd1 of class A");
+    }
+}
+class B extends A{
+    public void methd1(){  // Function Overriding
+        System.out.println("I am a methd1 of class B");
+    }
+}
+public class Chapter_10{
+    public static void main(String[] args) {
+
+        A a = new A();
+        B b = new B();
+        a.methd1();
+        b.methd1();
+
+
+
+
+    }
+}
+
+ */
+
+//                              Chapter 10: Inheritance
+
+
+//                               Dynamic Method Dispatch
+
+class phone {
+    public void music(){
+        System.out.println("Plying Music...");
+    }
+    public void on(){
+        System.out.println("Please turn on phone ");
+    }
+}
+class smartphone extends phone{
+    public void on(){    // Function Overrinding
+        System.out.println("Please turn on smartphone");
+    }
+    public void game(){
+        System.out.println("let's play a game ");
+    }
+}
+public class Chapter_10{
+    public static void main(String[] args) {
+
+        phone p = new smartphone(); // It is also allowed
+        p.on();    // It is allowed
+        p.music(); // It is also  allowed
+      //  p.game(); -> it is not allowed
+    }
+}
+
