@@ -1,0 +1,98 @@
+
+
+class cylinder{
+    float radius;
+    float height;
+
+
+
+    public void setRadius(float r){
+        radius = r;
+    }
+    public float getRadius(){
+        return  radius ;
+    }
+
+    public void setHeight(float h){
+        height =h;
+    }
+    public float getHeight(){
+        return height;
+    }
+
+//     Q2.
+
+    public double surafaceArea(){
+        return 2* 3.142 * radius * radius + 2 * 3.142 * radius * height;
+    }
+    public double volume(){
+        return 3.142 * radius * radius * height;
+    }
+
+//     Q3.
+       public cylinder(float a,float b){
+         this.radius = a;
+         this .height = b;
+    }
+
+
+
+}
+
+//  Q4
+class rectangle{
+    private int length;
+    private int bredath;
+
+
+    public rectangle(){
+        this.length = 5;
+        this.bredath = 10;
+    }
+
+    public int getBredath() {
+        return bredath;
+    }
+
+    public int getLength() {
+        return length;
+    }
+    public rectangle(int l,int m){
+        this.length=l;
+        this.bredath=m;
+    }
+}
+
+
+
+
+public class Practice_Set_9 {
+    public static void main(String[] args) {
+
+
+        cylinder tank = new cylinder(12.5f,15.5f);  // problem 3 answer 
+
+//                Problem 1
+
+        tank.setHeight(25.9f);
+        tank.setRadius(10.5f);
+        System.out.println(tank.getHeight());
+        System.out.println(tank.getRadius());
+
+//             Problem 2
+
+        System.out.println(tank.surafaceArea());
+        System.out.println(tank.volume());
+
+//                  Problem 4
+        rectangle rec = new rectangle(2,6);
+        System.out.println(rec.getLength());
+        System.out.println(rec.getBredath());
+
+
+
+    }
+}
+
+
+
