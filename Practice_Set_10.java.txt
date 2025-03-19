@@ -1,0 +1,44 @@
+//                                                   Practice Set 10 : Inheritance
+
+//  Q1. Create a class circle and use inheritance to create another class cylinder form it.
+
+class circle{
+    int radius;
+
+    public circle(int r){
+        System.out.println(" I am a paremetarized constructor of a circle ");
+        this.radius = r;
+    }
+
+    public double area(){
+        System.out.println("Area of a circle");
+        System.out.println(Math.PI* this.radius * this.radius);
+        return 0;
+    }
+}
+class cylinder1 extends circle{
+    int height;
+
+    public cylinder1(int r,int h){
+        super(r);
+        System.out.println("I am a paremetarized constructor of cylinder1");
+        this.height=h;
+
+    }
+
+    public double volume(){
+        System.out.println("Volume of a cylinder");
+        System.out.println(Math.PI* this.radius*this.radius*this.height);
+        return 0;
+    }
+}
+
+public class Practice_Set_10 {
+    public static void main(String[] args) {
+        cylinder1 c = new cylinder1(3,6);
+        c.area();
+        c.volume();
+
+
+    }
+}
