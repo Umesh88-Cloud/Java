@@ -1,0 +1,207 @@
+//                                 Chapter 11: Abstract classes & Interfaces
+
+
+/*                                        Abstract Classes And Methods
+
+abstract class parent{
+    public void hey(){
+        System.out.println("Hii, How are you");
+    }
+    public parent(){
+        System.out.println("I am a parent class constructor");
+    }
+    abstract public void greet();
+}
+
+
+class child extends parent{
+    public void greet(){
+        System.out.println("Good Morning");
+    }
+}
+
+abstract class child2 extends parent{
+    public void miss(){
+        System.out.println("Hey Miss");
+    }
+}
+public class Chapter_11 {
+    public static void main(String[] args) {
+
+//        parent p = new parent();    It gives Error Because, We Cant Create A Object Of Abstract Class
+        child c = new child();
+//        child2 c2 = new child2();     It gives Error Because, We Cant Create A Object Of Abstract Class
+
+    }
+}
+
+ */
+
+
+/*                                       Interfaces
+
+interface bicycle{
+    int a = 5;
+    public void applyBreak(int decrement);
+    public void speedUp(int increment);
+}
+
+interface horn{
+    public void pee();
+    public void po();
+}
+class AvonCycle implements bicycle,horn{
+    int speed= 7;
+    public void applyBreak(int decrement){
+
+        System.out.println("Applay Break");
+    }
+    public void speedUp(int increment){
+
+       System.out.println("SpeedUp");
+    }
+    public void pee(){
+        System.out.println("Pee,Pee,Pee");
+    }
+    public void po(){
+        System.out.println("Po,Po,Po");
+    }
+}
+
+public class Chapter_11 {
+    public static void main(String[] args) {
+        AvonCycle a = new AvonCycle();
+        a.applyBreak(1);
+        a.speedUp(2);
+        System.out.println(a.a); // You can create a properties in interface
+//        a.a= 4;  But we can not modify the properties of inheritance as they are final
+
+//        Methods of Another Interface , So we can create a multiple interfaces and implement it in one class
+        a.po();
+        a.pee();
+
+
+    }
+}
+
+ */
+
+
+
+//                                            Polymorphism Using Interfaces
+
+interface MyCamera{
+    public void TakeSnap();
+    public void RecordVideo();
+    private void greet(){
+        System.out.println("Good Morning");
+    }
+    default void RecordVideo4K(){
+        greet();
+        System.out.println("Record Video In 4K.....");
+    }
+}
+
+interface Wifi{
+    public void ConnectToNetwork(String network);
+    String [] getnetwork();
+}
+
+class MyCellPhone{
+    public void CallNumber(int phonenumber){
+        System.out.println("Calling"+ phonenumber);
+    }
+    public void PickCall(){
+        System.out.println("Connecting....");
+    }
+}
+
+class MySmartPhone extends MyCellPhone implements MyCamera,Wifi{
+    public void TakeSnap(){
+        System.out.println("Taking Snap");
+    }
+    public void RecordVideo(){
+        System.out.println("Record video");
+    }
+    public void ConnectToNetwork(String network){
+        System.out.println("Connecting to network"+ network);
+    }
+    public String [] getnetwork(){
+        System.out.println("Setting list of Network");
+        String [] networklist  = {"Umesh","Apeksha","Prathamesh"};
+        return networklist;
+    }
+}
+
+public class Chapter_11 {
+    public static void main(String[] args) {
+
+        MySmartPhone ms = new MySmartPhone();
+        String [] arr = ms.getnetwork();
+
+        for (String item: arr){
+            System.out.println(item);
+        }
+
+        MyCamera cam = new MySmartPhone();  // Here we only access a method of MyCamera interface
+        cam.RecordVideo();
+//      cam.getnetwork() ---> Its not work because of, we can get reference as a MyCamera and create an object of MySmartphone
+
+
+
+    }
+}
+
+
+
+
+
+
+/*                                           Inheritance In Interfaces
+
+
+interface  sampleclass{    // here we write a sampleclass interface
+    void meth1();
+    void meth2();
+}
+
+interface smapleclass1 extends sampleclass{   // here we acess the methods of sampleclass interface by using extend keyword
+    void meth3();
+    void meth4();
+}
+class  sampleclass2 implements smapleclass1{    // here we write a class to implement the sampleclass1 interface
+    public void meth1(){
+        System.out.println("I am a meth 1");
+    }
+    public void meth2(){
+        System.out.println("i am a meth 2");
+    }
+    public void meth3(){
+        System.out.println("I am a meth 3");
+    }
+    public void meth4(){
+        System.out.println("i am a meth 4");
+    }
+
+}
+
+
+public class Chapter_11 {
+    public static void main(String[] args) {
+
+        sampleclass2 obj = new sampleclass2();
+        obj.meth1();
+        obj.meth2();
+        obj.meth3();
+        obj.meth4();
+
+
+    }
+}
+
+ */
+
+
+
+
+
