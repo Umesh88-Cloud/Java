@@ -1,0 +1,69 @@
+//                                              Chapter 12: Packages
+
+
+
+//                                         Chapter 12: Interpreter Vs Compiler
+
+/* Note : just for our understanding to revise the basic concept
+
+                                        Interpreter Vs Compiler
+
+          Interpreter : Interpreter translate one statement at a time into machine code.
+          Compiler : Compiler scans the entire program and translate whole of it into machine code.
+
+          Interpreter                                                           Compiler
+       * One statement at a time                                             * Entire program at a time
+       * Interpreter is needed everytime                                     * Once compiled it is not needed
+       * Partial execution if error                                          * No execution if an error occurs
+       * Usually easy for programmers                                        * Usually not as easy as interpreted ones
+
+
+ */
+
+
+/*
+                                                 Chapter 12: Packages
+
+
+Packages In Java:- A packages is used to group related classes packages help in avoiding name.
+                                  There are two types of packages
+
+                    1) Built in packages ---> Java API
+                    2) User defined packages ----> Custom Packages
+
+
+Using a java Package :-
+1) import java.lang * ----> import everything from java.lang
+2) import java.lang.String---> import string from java.lang
+3) s = new java.lang.String("umesh")---> use without importing
+
+
+Creating a java package :-
+     below Syntax are used to create a package in java
+    1)  java -d . umesh.java
+    2)  java -d . *.java
+ */
+
+
+
+/*
+                                       Chapter 12: Access Modifiers In Java
+
+  Access modifiers determines whether other classes can particular field or invoke a particular method can be public ,
+  private, protected or default (no modifier).
+
+
+  Modifier              class                  package                subclass               world
+
+1) public                 Y                       Y                     Y                       Y
+2) protected              Y                       Y                     Y                       N
+3) default                Y                       Y                     N                       N
+4) Private                Y                       N                     N                       N
+
+ */
+
+public class Chapter_12 {
+    public static void main(String[] args) {
+
+    }
+}
