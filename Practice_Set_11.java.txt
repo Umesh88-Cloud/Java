@@ -1,0 +1,172 @@
+//                                         Practice Set : 11 - 
+
+
+/*
+     Q1. Create an abstract class pen with methods write() and refill() as abstract method
+
+
+abstract class pen{
+    public void hii(){
+        System.out.println("Hii I am an extra method with hii name ");
+    }
+    public abstract void write();
+    public abstract void refill();
+
+}
+class action extends pen{
+    public void write(){
+        System.out.println("Take a pen and write your name");
+    }
+    public void refill(){
+        System.out.println("please refill your pen");
+    }
+}
+
+
+public class Practice_Set_11 {
+    public static void main(String[] args) {
+        action a = new action();
+        a.write();
+        a.refill();
+
+
+    }
+}
+
+ */
+
+
+/*
+   Q2. use the pen class form Q1 to crete a concrete class fountainpen with additional method changeNib
+
+abstract class pen{
+
+    public abstract void write();
+    public abstract void refill();
+
+}
+
+class fountainpen extends pen{
+    public  void write(){
+        System.out.println("Write a name using pen....");
+    }
+    public void refill(){
+        System.out.println("refill your pen....");
+    }
+    public void changenib(){
+        System.out.println("changing the nib...");
+    }
+
+
+}
+
+
+public class Practice_Set_11 {
+    public static void main(String[] args) {
+        fountainpen obj = new fountainpen();
+        obj.changenib();
+        obj.write();
+        obj.refill();
+
+
+    }
+}
+
+ */
+
+
+
+/*
+    Q3. Crete a class Monkey with jump() and bite() method. Create a class Human which inherits this monkey class
+         and implements BasicAnimal interface with eat() and sleep methods.
+                                               &
+    Q5. Demonstrate polymorphism using monkey class form Q1.
+
+
+
+
+interface BasicAnimal{
+    public void eat();
+    public void sleep();
+
+
+}
+class Monkey{
+    public void jump(){
+        System.out.println("Start Jumping");
+    }
+    public void bite(){
+        System.out.println("bite a banana");
+    }
+}
+
+class Human extends Monkey implements BasicAnimal{
+    public void eat(){
+        System.out.println("Eat a pineapple ");
+    }
+    public void sleep(){
+        System.out.println("Sleeping.....");
+    }
+
+}
+public class Practice_Set_11 {
+    public static void main(String[] args) {
+        Human h = new Human();
+        h.eat();
+        h.bite();
+        h.jump();
+        h.sleep();
+
+//        Q5 Answer
+        Monkey m = new Human();
+
+//      m.eat();  --> cant use eat method because the reference is monkey which does not have an eat method
+        m.jump();
+        m.bite();
+
+
+
+    }
+}
+
+ */
+
+/*
+    Q4. Crete a class Telephone with rings() ,lift() and disconnect() methods as abstract methods.Crete another class
+        SmartTelephone and demonstrate polymorphism.
+
+
+abstract class Telephone{
+    abstract void rings();
+    abstract void lift();
+    abstract void disconnect();
+}
+
+class SmartTelephone extends Telephone{
+    public void rings(){
+        System.out.println("Ringing...");
+    }
+    public void lift(){
+        System.out.println("Lift the phone ");
+    }
+    public void disconnect(){
+        System.out.println("Disconnecting....");
+    }
+    public void hello(){
+        System.out.println("Hello...");
+    }
+}
+
+public class Practice_Set_11 {
+    public static void main(String[] args) {
+        Telephone t = new SmartTelephone();
+        t.rings();
+        t.disconnect();
+        t.lift();
+//      t.hello() --> not allowed
+
+    }
+}
+
+ */
+
