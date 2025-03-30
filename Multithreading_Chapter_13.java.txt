@@ -1,0 +1,170 @@
+//                                              Chapter 13: Multithreading
+
+
+
+/*                                           Java Thread Using extends Thread
+
+class mythread1 extends Thread{
+    public void run(){
+        int i=0;
+        while (i<=10){
+            System.out.println("I am a Thread1 for cooking");
+            System.out.println("I am happy");
+            i++;
+        }
+    }
+}
+class mythread2 extends Thread{
+    public void run(){
+        int i=0;
+        while(i<=10){
+            System.out.println("I am a Thread2 for chatting with her");
+            System.out.println("I am sad ");
+            i++;
+        }
+    }
+}
+
+public class Chapter_13 {
+    public static void main(String[] args) {
+        mythread1 t1 = new mythread1();
+        mythread2 t2 = new mythread2();
+
+  //      t1.run();   not working
+  //      t2.run();
+
+           t1.start();   // Working
+           t2.start();   // Working
+
+    }
+}
+
+ */
+
+
+
+/*                                     Java Thread Using implementing runnable
+
+
+class mythread1 implements Runnable{
+        public void run() {
+            int i = 1;
+            while (i<=10) {
+                System.out.println("Thread 1 Firing....");
+                i++;
+
+            }
+        }
+}
+class mythread2 implements Runnable{
+    public void run(){
+        int i=1;
+        while (i<=10){
+            System.out.println("Thread 2 Firing....");
+            i++;
+        }
+    }
+}
+
+
+public class Chapter_13 {
+    public static void main(String[] args) {
+
+        mythread1 bullet1 = new mythread1();
+        Thread gun1 = new Thread(bullet1);
+
+        mythread2 bullet2 = new mythread2();
+        Thread gun2 = new Thread(bullet2);
+
+        gun1.start();
+        gun2.start();
+
+
+    }
+}
+
+ */
+
+
+
+
+/*                                             Constructor From Thread Class
+
+               1) Thread()
+               2) Thread(String name)
+               3) Thread(Runnable)
+               4) Thread(Runnable,String name)
+
+
+class mythread extends Thread{
+    public mythread(String name){     // Constructor
+        super(name);                  // Constructor calling using super keyword
+    }
+    public void run(){
+        System.out.println("I am good");
+    }
+}
+
+public class Chapter_13 {
+    public static void main(String[] args) {
+
+        mythread t1 = new mythread("umesh");
+        mythread t2 = new mythread("Apeksha");
+
+        t1.start();
+        t2.start();
+
+        System.out.println("The name of thread t1 is "+ t1.getName());
+        System.out.println("The id of thread t1 is "+ t1.getId());
+
+        System.out.println("The name of thread t2 is "+ t2.getName());
+        System.out.println("The id of thread t2 is "+ t2.getId());
+
+
+    }
+}
+
+ */
+
+
+
+/*                                       Thread Priorities
+
+
+class mythread extends Thread{
+    public mythread(String name){     // Constructor
+        super(name);                  // Constructor calling using super keyword
+    }
+    public void run(){
+        System.out.println("I am good "+this.getName() );
+    }
+}
+
+public class Chapter_13 {
+    public static void main(String[] args) {
+
+        mythread t1 = new mythread("umesh");
+        mythread t2 = new mythread("Archana");
+        mythread t3 = new mythread("Aakash");
+        mythread t4 = new mythread("Prathamesh");
+        mythread t5 = new mythread("Apeksha");
+
+        t2.setPriority(Thread.MAX_PRIORITY);      // Setting Priority
+        t1.setPriority(Thread.MAX_PRIORITY);      // Setting Priority
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+
+
+
+    }
+}
+
+ */
+
+
+
+
