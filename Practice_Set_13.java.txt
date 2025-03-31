@@ -1,0 +1,70 @@
+//                                            Practice Set 13: Multithreading
+
+
+//       Q1. Write a program to print "good morning" and "welcome" continuously on the screen in java using threads
+
+class mythread extends Thread{
+    public void run(){
+
+        while(true){
+            try{
+                Thread.sleep(200);      // Delay for execution Q2
+            }
+            catch (Exception e){
+                System.out.println(e);
+            }
+            System.out.println("Good Morning");
+
+        }
+    }
+}
+class mythread1 extends Thread{
+    public void run(){
+
+        while(true){
+            try{
+                Thread.sleep(300);      //  delay for execution Q2
+            }
+            catch (Exception e){
+                System.out.println(e);
+            }
+            System.out.println("welcome");
+
+        }
+    }
+}
+
+
+//      Q2. Add a sleep method in welcome thread of question 1 to delay its execution for 200ms.
+//      Q3. Demonstrate getPriority() and setPriority() methods in java Threads. 
+//      Q4. How do you get state of a given thread in java.
+
+
+
+
+
+public class Practice_Set_13 {
+    public static void main(String[] args) {
+
+//         Q1 Answer
+        mythread t = new mythread();
+        t.start();
+        t.setPriority(5);                     // Q3
+        System.out.println(t.getPriority());  // Q3
+        System.out.println(t.getState());     // Q4
+
+
+        mythread1 t1 = new mythread1();
+        t1.start();
+        t1.setPriority(6);                       // Q3
+        System.out.println(t1.getPriority());    // Q3
+        System.out.println(t1.getState());       // Q4
+
+
+
+
+
+
+
+    }
+}
